@@ -2,6 +2,7 @@ provider "aws" {
   region = var.region
 }
 
+
 data "aws_availability_zones" "available" {}
 
 locals {
@@ -12,7 +13,11 @@ resource "random_string" "suffix" {
   length  = 8
   special = false
 }
-
+resource "aws_s3_bucket" "mybackend" {
+  bucket = "ikeita-terainning"
+  region= "us-east-1"
+  encrypt= true
+}
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
   version = "3.19.0"
