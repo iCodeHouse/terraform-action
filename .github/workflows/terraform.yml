@@ -42,7 +42,9 @@ jobs:
     - name: Terra init
       run: terraform init
     - name: Terraform Plan
-      run: terraform plan
+      run: |
+        cd EKS
+        terraform plan
     - name: Check 
       run: echo Hello world
 
