@@ -16,7 +16,7 @@ resource "random_string" "suffix" {
 resource "aws_s3_bucket" "mybackend" {
   bucket = "ikeita-terainning"
   region= "us-east-1"
-  encrypt= true
+  
 }
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
