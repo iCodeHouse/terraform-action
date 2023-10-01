@@ -53,6 +53,9 @@ jobs:
 
     - name: Check 
       run: echo Hello world
+    - name: Create and Upload Kubeconfig to s3
+      run: |
+        aws eks update-kubeconfig --name education-eks-jC6JSYTx --region us-east-1
 
 
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
