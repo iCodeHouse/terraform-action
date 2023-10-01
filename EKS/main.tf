@@ -15,7 +15,6 @@ resource "random_string" "suffix" {
 }
 resource "aws_s3_bucket" "mybackend" {
   bucket = "ikeita-terainning"
-  region= "us-east-1"
   
 }
 module "vpc" {
